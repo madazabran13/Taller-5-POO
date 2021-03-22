@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio6">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="" visibility="public" xPosition="39.0" yPosition="155.0">
+      <Fields>
+        <Field name="dia" type="int" visibility="private"/>
+        <Field name="mes" type="int" visibility="private"/>
+        <Field name="anualidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Direccion" package="" visibility="public" xPosition="412.0" yPosition="170.0">
+      <Fields>
+        <Field name="direccion_domi" type="string" visibility="private"/>
+        <Field name="direccion_trabajo" type="string" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Direccion" target="Persona" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

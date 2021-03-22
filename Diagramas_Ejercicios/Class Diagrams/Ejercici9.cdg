@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercici9">
+  <ClassDiagramComponents>
+    <Class name="Asignatura" package="" visibility="public" xPosition="233.0" yPosition="296.0">
+      <Fields>
+        <Field name="nombre" type="char" visibility="private"/>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="n_maxgrupo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Grupo" package="" visibility="public" xPosition="534.0" yPosition="306.0">
+      <Fields>
+        <Field name="num_grupo" type="int" visibility="private"/>
+        <Field name="docente" type="char" visibility="private"/>
+        <Field name="n_maxestudiante" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Aula" package="" visibility="public" xPosition="528.0" yPosition="46.0">
+      <Fields>
+        <Field name="registro_grupos" type="string" visibility="private"/>
+        <Field name="imprimir_asignatura" type="string" visibility="private"/>
+        <Field name="listado_estudiantes" type="string" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Estudiante" package="" visibility="public" xPosition="876.0" yPosition="283.0">
+      <Fields>
+        <Field name="primer_nombre" type="char" visibility="private"/>
+        <Field name="primer_apellido" type="char" visibility="private"/>
+        <Field name="notas_p1" type="float" visibility="private"/>
+        <Field name="notas_p2" type="float" visibility="private"/>
+        <Field name="notas_p3" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="contiene" source="Grupo" target="Estudiante" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="tiene" source="Asignatura" target="Grupo" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="contiene" source="Aula" target="Grupo" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
